@@ -151,7 +151,7 @@ body {
 
   .plantin__hero__desk {
     display: block;
-    max-width: 50vw;
+    max-width: 70vw;
     grid-row: 1/3;
     grid-column: 1/3;
   }
@@ -165,18 +165,20 @@ body {
 
   .title__background {
     background-image: url("../assets/img/titlebackground.png");
-border-radius: 2rem;
+
 padding-left: 1.5rem;
 padding-right: 0.5rem;
 margin-right: -0.5rem;
+
+
   }
 
   .hero__title__desk {
 
     grid-column: 1/4;
-    grid-row: 1/3;
+    grid-row: 2/3;
     justify-self: flex-end;
-    align-self: center;
+    align-self: flex-start;
 
     display: flex;
     flex-direction: column;
@@ -186,7 +188,7 @@ margin-right: -0.5rem;
     color: var(--brown);
     text-align: right;
     font-family: "EB Garamond";
-    font-size: 6vw;
+    font-size: 7vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -195,7 +197,8 @@ margin-right: -0.5rem;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     margin-right: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    
   }
 
   .hero__title__desk:before {
@@ -214,7 +217,7 @@ margin-right: -0.5rem;
     grid-column: 3/4;
     justify-self: flex-end;
     align-self: center;
-    max-width: 30vw;
+    max-width: 40vw;
     margin-right: 4rem;
   }
 }
@@ -229,13 +232,17 @@ margin-right: -0.5rem;
 
   .plantin__hero__desk {
     display: block;
-    max-width: 50vw;
+    max-width: 80vw;
     grid-row: 1/3;
     grid-column: 1/3;
   }
 
-.hero__title__desk {
-  margin-top: 13rem;
-}
+    .stamps__desk {
+      
+      max-width: 30vw;
+      margin-right: 4rem;
+    }
+
+
 }
 
