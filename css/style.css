@@ -1,0 +1,241 @@
+:root {
+  --broken-white: #F9F6F1;
+  --beige: #ECDDCA;
+  --burgundy: #572D2D;
+  --refreshing-blue: #5D87B0;
+  --brown: #302B2B;
+}
+
+body {
+  background-color: var(--broken-white);
+
+}
+
+.hero__section {
+
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.plantin__hero {
+  grid-row: 1/4;
+  grid-column: 1/4;
+  width: 100%;
+  height: 100%;
+
+}
+
+.stamp {
+  grid-row: 2/4;
+  grid-column: 2/4;
+  animation: float 3s ease-out infinite;
+
+}
+
+.stamps__desk {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.burger {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.hero__text {
+
+  grid-row: 3/5;
+  grid-column: 1/4;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 6.75rem;
+  padding: 0rem 0.8125rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  flex-shrink: 0;
+  border-radius: 0.1875rem;
+  background: var(--refreshing-blue);
+  margin-top: -2rem;
+}
+
+.heresey {
+  color: var(--broken-white);
+  text-align: center;
+  font-family: "EB Garamond";
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+
+  width: 22.375rem;
+  justify-self: center;
+  position: absolute;
+
+}
+
+.above__title {
+
+  width: 21.5rem;
+  height: 2.0625rem;
+
+  color: var(--beige);
+  text-align: right;
+  font-family: "EB Garamond";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: -4rem;
+
+
+}
+
+.hero__text:before {
+
+  margin-left: -17rem;
+  margin-top: -5.5rem;
+  z-index: 2;
+  content: url("../assets/img/plantinlogo.svg");
+}
+
+.plantin__hero__desk {
+  display: none;
+}
+
+.title__lines {
+  display: none;
+}
+
+.hero__title__desk {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .hero__section {
+    background-image: url("../assets/img/paperbackgroundsmall.jpg");
+    background-repeat: repeat;
+    min-height: 100vh;
+    min-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .plantin__hero {
+    display: none;
+  }
+
+  .plantin__hero__desk {
+    display: block;
+    max-width: 50vw;
+    grid-row: 1/3;
+    grid-column: 1/3;
+  }
+
+  .stamp,
+  .above__title,
+  .heresey,
+  .hero__text {
+    display: none;
+  }
+
+  .title__background {
+    background-image: url("../assets/img/titlebackground.png");
+border-radius: 2rem;
+padding-left: 1.5rem;
+padding-right: 0.5rem;
+margin-right: -0.5rem;
+  }
+
+  .hero__title__desk {
+
+    grid-column: 1/4;
+    grid-row: 1/3;
+    justify-self: flex-end;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+
+    color: var(--brown);
+    text-align: right;
+    font-family: "EB Garamond";
+    font-size: 6vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.19744rem;
+    text-transform: uppercase;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    margin-right: 2rem;
+    margin-top: 3rem;
+  }
+
+  .hero__title__desk:before {
+    content: "Christophe Plantin";
+    font-size: 2.5vw;
+    text-decoration: underline;
+    color: var(--burgundy);
+  }
+
+
+  .stamps__desk {
+    display: block;
+    grid-row: 1/2;
+
+
+    grid-column: 3/4;
+    justify-self: flex-end;
+    align-self: center;
+    max-width: 30vw;
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero__section {
+
+    max-height: 55.5625rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .plantin__hero__desk {
+    display: block;
+    max-width: 50vw;
+    grid-row: 1/3;
+    grid-column: 1/3;
+  }
+
+.hero__title__desk {
+  margin-top: 13rem;
+}
+}
+
