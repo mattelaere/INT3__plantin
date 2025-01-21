@@ -13,12 +13,14 @@ html {
   background-color: var(--broken-white);
   background-image: url("../../assets/img/paperbackgroundloweropacity.png");
   background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--broken-white);
   max-width: var(--max-page-width);
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -26,7 +28,6 @@ body {
 }
 
 .hero__section {
-
   display: grid;
   grid-template-rows: 1fr 2fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -189,7 +190,7 @@ body {
   font-weight: 500;
   line-height: 1.575rem;
   max-width: 22.3125rem;
-
+  z-index: 3;
 
 }
 
@@ -314,9 +315,20 @@ body {
 
 
 /* ------- text highlights ---------- */
-/ .burgundy__extrabold {
+ .burgundy__extrabold {
   font-weight: 700;
   color: var(--burgundy);
+}
+
+.burgundy__italic{
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+.brown__bold{
+  font-weight: 600;
+  color: var(--brown);
 }
 
 .brown__extrabold {
@@ -326,6 +338,22 @@ body {
 
 .bold__italic {
   font-style: italic;
+  font-weight: 700;
+}
+
+.beige__extrabold {
+  color: var(--beige);
+  font-weight: 700;
+}
+
+.beige__italic {
+  color: var(--beige);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.blue__extrabold {
+  color: var(--refreshing-blue);
   font-weight: 700;
 }
 
@@ -355,7 +383,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: -7rem;
-  margin-bottom: 1rem;
+
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -369,16 +397,117 @@ body {
   font-family: "EB Garamond";
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   justify-self: center;
   max-width: 22rem;
   height: 4.125rem;
-
+  align-self: center;
 }
 
 
 
 /* ------ accusation section ------ */
+
+
+
+.accusation__section {
+  background-color: var(--broken-white);
+  background-repeat: repeat;
+  padding-top: 2rem;
+  /* display: grid;
+  grid-template-rows: 4(1fr);
+  grid-template-columns: 1fr 1fr ; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.accusation__h2 {
+  color: var(--burgundy, #572D2D);
+  font-weight: 800;
+  font-size: 1.875rem;
+  font-style: italic;
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+  margin-right: 5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.accusation__images {
+  display: flex;
+  flex-direction: row;
+}
+
+.accusation__subtitle {
+  color: var(--brownish, #CBAC8D);
+
+  font-size: 1.125rem;
+  margin-left: 5rem;
+  font-weight: 800;
+
+  text-transform: lowercase;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.family__of__love__heart {
+  width: 50vw;
+  margin-right: -4rem;
+
+}
+
+.family__of__love__detail {
+
+  width: 80vw;
+  height: 30vh;
+
+}
+
+.accusation__p {
+  align-self: center;
+  color: var(--brown);
+  font-size: 1.125rem;
+  font-weight: 500;
+  max-width: 21.8125rem;
+  margin: 2rem 0;
+}
+
+
+
+.plantin__case {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--refreshing-blue);
+  background-image: url(../../assets/img/plantin__case__bg.png);
+  background-position:right;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  align-items: center;
+padding: 1rem 0;
+}
+
+.plantin__case__h3 {
+  color: var(--beige, #ECDDCA);
+  font-family: "EB Garamond";
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-right: 6.7rem;
+}
+
+.plantin__case__p {
+  color: var(--broken-white, #F9F6F1);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 20rem;
+}
+
 
 @media only screen and (min-width: 37.5em) {
   .hero__section {
@@ -480,7 +609,6 @@ body {
     margin-right: 4vw;
     justify-self: flex-end;
     min-width: 17vw;
-    z-index: 0;
     rotate: 19deg;
     z-index: 1;
   }
