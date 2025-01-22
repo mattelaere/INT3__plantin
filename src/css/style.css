@@ -572,9 +572,115 @@ body {
   grid-row: 1/2;
   grid-column: 1/2;
   justify-self: center;
-  transform: rotate(-31.475deg);
 }
 
+.normal__book__1 {
+  transform: rotate(-31.475deg);
+  margin-right: 5rem;
+  margin-top: -3rem;
+}
+
+.normal__book__2 {
+  transform: rotate(-5.148deg);
+  margin-top: -3rem;
+}
+
+.normal__book__3 {
+  transform: rotate(18.332deg);
+  margin-right: -8rem;
+  margin-top: -2rem;
+}
+
+.mysterious__book {
+  width: 9.75rem;
+  height: 12.9375rem;
+  transform: rotate(6.701deg);
+
+}
+
+.normal__book__4 {
+  transform: rotate(-42.359deg);
+  margin-right: 13rem;
+  margin-top: 2rem;
+}
+
+.normal__book__5 {
+  transform: rotate(28.183deg);
+  margin-right: -13rem;
+  margin-top: 3rem;
+}
+
+.normal__book__6 {
+  transform: rotate(-29.318deg);
+  margin-top: 4rem;
+  margin-right: 4rem;
+}
+
+.normal__book__7 {
+  transform: rotate(35.162deg);
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+
+.anonymous__book {
+  width: 7.5625rem;
+  height: 9.8125rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.anonymous__more__h3 {
+  color: var(--broken-white);
+  font-size: 1.3125rem;
+  font-weight: 800;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: center;
+  align-self: center;
+  max-width: 40vw;
+ 
+}
+
+.anonymous__more__subtitle{
+  color: var(--broken-white);
+   
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 160%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+  margin-top: 5rem;
+  
+}
+
+.anonymous__more__p1, .anonymous__more__p2, .anonymous__more__p3{
+  color: var(--broken-white);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 155%;  
+    align-self: center;
+      justify-self: center;
+      max-width: 24.8125rem;
+      margin: 0 2rem;
+}
+
+.anonymous__more__p1{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.anonymous__more__p2 {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+.anonymous__more__p3 {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
 
 @media only screen and (min-width: 37.5em) {
   .hero__section {
