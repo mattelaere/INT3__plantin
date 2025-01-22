@@ -176,6 +176,7 @@ body {
   gap: 2rem;
   /* width: 100vw; */
   padding-bottom: 2rem;
+  padding: 0 2rem;
 }
 
 
@@ -232,6 +233,7 @@ body {
   z-index: 2;
   height: 16.75rem;
   min-width: 18rem;
+  margin-left: -2rem;
 }
 
 /* -------- burger menu --------- */
@@ -476,9 +478,10 @@ body {
 .accusation__p {
   align-self: center;
   color: var(--brown);
-  font-size: 1.125rem;
+      font-size: 1.2250rem;
   font-weight: 500;
   max-width: 21.8125rem;
+  line-height: 130%;
   margin: 2rem 0;
 }
 
@@ -533,7 +536,7 @@ body {
   margin-top: -2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
 }
 
 .anonymous__more {
@@ -551,7 +554,7 @@ body {
   grid-column: 1/2;
   grid-row: 1/2;
   color: var(--brownish);
-
+  margin-top: -3rem;
   font-size: 10.89481rem;
   font-weight: 600;
 }
@@ -574,7 +577,7 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-self: center;
   align-items: center;
-max-height: 70vh;
+  max-height: 70vh;
 }
 
 .normal__book__1,
@@ -655,39 +658,42 @@ max-height: 70vh;
   justify-self: center;
   align-self: center;
   max-width: 40vw;
- 
+
 }
 
-.anonymous__more__subtitle{
+.anonymous__more__subtitle {
   color: var(--broken-white);
-   
-    font-size: 1rem;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 160%;
+
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 160%;
   grid-column: 2/3;
   grid-row: 1/2;
   align-self: center;
   justify-self: center;
   margin-top: 5rem;
-  
+
 }
 
-.anonymous__more__p1, .anonymous__more__p2, .anonymous__more__p3{
+.anonymous__more__p1,
+.anonymous__more__p2,
+.anonymous__more__p3 {
   color: var(--broken-white);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 155%;  
-    align-self: center;
-      justify-self: center;
-      max-width: 24.8125rem;
-      margin: 0 2rem;
+      font-size: 1.2250rem;
+  font-weight: 500;
+  line-height: 155%;
+  align-self: center;
+  justify-self: center;
+  max-width: 24.8125rem;
+  margin: 0 2rem;
 }
 
-.anonymous__more__p1{
+.anonymous__more__p1 {
   grid-column: 1/3;
   grid-row: 2/3;
 }
+
 .anonymous__more__p2 {
   grid-column: 1/3;
   grid-row: 3/4;
@@ -696,6 +702,181 @@ max-height: 70vh;
 .anonymous__more__p3 {
   grid-column: 1/3;
   grid-row: 4/5;
+}
+
+/* ----------- known members section ------------ */
+
+.known__members {
+  display: grid;
+  grid-template-columns: 2(1fr);
+  grid-template-rows: 4(1fr);
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.known__members__numbering {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: var(--refreshing-blue);
+  font-size: 10.89481rem;
+  font-weight: 600;
+  margin-left: -3rem;
+}
+
+.known__members__h2 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  color: var(--burgundy, #572D2D);
+  font-family: "EB Garamond";
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: flex-end;
+  font-weight: 700;
+  max-width: 50vw;
+  margin-bottom: 2rem;
+}
+
+#coin-container {
+  grid-column: 1/3;
+}
+
+.known__members__p1 {
+  color: var(--brown);
+      font-size: 1.2250rem;
+  font-weight: 500;
+  grid-row: 3/4;
+  grid-column: 1/3;
+  line-height: 120%;
+}
+
+.known__members__p2 {
+  color: var(--brown);
+      font-size: 1.2250rem;
+  font-weight: 500;
+  grid-row: 4/5;
+  grid-column: 1/3;
+  line-height: 120%;
+}
+
+/* ----------- robbery section ------------ */
+
+
+.robbery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3(1fr);
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.robbery__numbering {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: var(--beige);
+  font-size: 10.89481rem;
+  font-weight: 600;
+  margin-left: -4rem;
+}
+
+.robbery__h2 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  color: var(--burgundy, #572D2D);
+  font-family: "EB Garamond";
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: flex-end;
+  font-weight: 700;
+  max-width: 60vw;
+  margin-bottom: 2rem;
+}
+
+.robbery__images {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-rows: 2(1fr);
+  grid-template-columns: 2(1fr);
+}
+
+
+.robbery__text,
+.robbery__vase,
+.robbery__harp,
+.robbery__violin,
+.robbery__goblet {
+  grid-row: 1/3;
+  grid-column: 1/3;
+  justify-self: center;
+}
+
+.robbery__text {
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+
+.robbery__vase {
+  margin-top: 2rem;
+  margin-right: 11rem;
+}
+
+.robbery__goblet {
+  margin-left: 7rem;
+}
+
+.robbery__violin {
+  margin-top: 6rem;
+  margin-left: 6rem;
+}
+
+.robbery__harp {
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
+.robbery__arrow {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  justify-self: center;
+}
+
+.robbery__p {
+  display: none;
+}
+
+.robbery__box {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+/* --------- motive section  --------- */
+
+.motive__section {
+  background: url("../../assets/img/paperbackgroundloweropacity.png");
+  background-repeat: repeat;
+  padding: 2rem 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.motive__h2 {
+  color: var(--inbetween);
+  font-size: 1.125rem;
+  font-weight: 800;
+  align-self: center;
+}
+
+.motive__p1,
+.motive__p2 {
+  color: var(--brown);
+      font-size: 1.2250rem;
+  font-weight: 500;
+  line-height: 130%;
+ 
 }
 
 @media only screen and (min-width: 37.5em) {
