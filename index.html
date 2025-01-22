@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
     rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
   <title>Christoph Plantin</title>
 </head>
 
@@ -36,10 +37,10 @@
         </svg>
       </button>
       <ul class="nav__list" id="nav__list">
-        <li class="nav__item"><a class="nav__link" href="/#">Accusation</a></li>
-        <li class="nav__item"><a class="nav__link" href="/#">Evidence</a></li>
-        <li class="nav__item"><a class="nav__link" href="/#">Alibi</a></li>
-        <li class="nav__item"><a class="nav__link" href="/#">Verdict</a></li>
+        <li class="nav__item"><a class="nav__link" href="#accusation">Accusation</a></li>
+        <li class="nav__item"><a class="nav__link" href="#evidence">Evidence</a></li>
+        <li class="nav__item"><a class="nav__link" href="#alibi">Alibi</a></li>
+        <li class="nav__item"><a class="nav__link" href="#verdict">Verdict</a></li>
       </ul>
     </nav>
     <img class="plantin__hero" src="assets/img/plantinhero.png" alt="image of plantin with compass">
@@ -85,7 +86,7 @@
           business</span>, and even his <span class="beige__italic">life.</span></p>
     </div>
   </section>
-  <section class="accusation__section">
+  <section id="accusation" class="accusation__section">
     <h2 class="accusation__h2">The Family of Love</h2>
     <p class="accusation__subtitle">A Risky Connection</p>
     <div class="accusation__images">
@@ -95,19 +96,106 @@
     <p class="accusation__p"><span class="burgundy__italic">The Family of Love</span> was founded in the 16th century by
       <span class="blue__extrabold"> Hendrik Niclaes</span>, a Dutch merchant turned religious leader. The
       group believed in <span class="brown__bold"> spiritual enlightenment, rejected organized religion </span>, and
-      focused on <span class="brown__bold">love</span> and<span class="brown__bold"> unity.</span></p>
+      focused on <span class="brown__bold">love</span> and<span class="brown__bold"> unity.</span>
+    </p>
     <div class="plantin__case">
       <h3 class="plantin__case__h3">The Case Against Plantin</h3>
       <p class="plantin__case__p">Several pieces of evidence hint at Plantin’s ties to the Family of Love. While none
         prove his guilt outright, together
         they raise questions about his beliefs and actions.</p>
     </div>
-
-
-
   </section>
-
+  <section id="evidence" class="evidence__section">
+    <div class="anonymous__texts">
+      <div class="anonymous__interaction__section">
+        <p class="anonymous__numbering">I</p>
+        <h2 class="anonymous__h2">Printing anonymous texts</h2>
+        <div class="book__section">
+          <img class="normal__book__1" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="normal__book__2" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="normal__book__3" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="mysterious__book" src="./assets/img/mysterybook.png" alt="mysterious book">
+          <img class="normal__book__4" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="normal__book__5" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="normal__book__6" src="./assets/img/normalbook.png" alt="normal book">
+          <img class="normal__book__7" src="./assets/img/normalbook.png" alt="normal book">
+        </div>
+        <div class="anonymous__more">
+          <img class="anonymous__book" src="./assets/img/mysterybook.png" alt="mysterious books">
+          <h3 class="anonymous__more__h3">Terugvoeringe van de dolende Sielen</h3>
+          <p class="anonymous__more__subtitle">author: “anonymous”</p>
+          <p class="anonymous__more__p1">Plantin’s press often printed books without clear authorship. Many of these
+            works contained themes of love and inner
+            spirituality, ideas associated with the Family of Love.</p>
+          <p class="anonymous__more__p2">Some titles in his records were later linked to the sect, even though they
+            didn’t openly challenge Catholic teachings.</p>
+          <p class="anonymous__more__p3">For example, Plantin printed devotional books that avoided political or
+            religious disputes. These texts mirrored the
+            Family of Love’s focus on peace and inner faith.</p>
+        </div>
+      </div>
+    </div>
+    <div class="known__members">
+      <p class="know__members__numbering">II</p>
+      <h2 class="known__members__h2">Connections to Known Members</h2>
+      <div id="coin-container" ></div>
+      <p class="known__members__p1">Plantin was friends with Abraham Ortelius, a famous cartographer who was rumored to
+        sympathize with the Family of Love.
+      </p>
+      <p class="known__members__p2">Their close friendship suggests Plantin may have shared or tolerated these beliefs.
+      </p>
+    </div>
+    <div class="robbery">
+      <p class="robbery__numbering">III</p>
+      <h2 class="robbery__h2">The Robbery of 1562</h2>
+      <div class="robbery__images">
+        <img src="./assets/img/text.png" alt="banned text">
+        <img src="./assets/img/harp.png" alt="harp">
+        <img src="./assets/img/goblet.png" alt="goblet">
+        <img src="./assets/img/vase.png" alt="vase">
+        <img src="./assets/img/violin.png" alt="violin">
+      </div>
+      <img src="./assets/img/arrow.svg" alt="arrow">
+      <img src="./assets/img/box.png" alt="box">
+    </div>
+  </section>
+<section  class="motive__section">
+<h2 class="motive__h2">Why would Plantin take the risk?</h2>
+<div id="balance"></div>
+<p class="motive__p1">Plantin’s ties to the Family of Love may have been motivated by both personal beliefs and business interests. The sect’s
+ideas about peace and spiritual love may have appealed to him, especially in a time of religious violence.</p>
+<p class="motive__p2">On a practical level, Antwerp was full of religious refugees and dissenters. Printing texts for groups like the Family
+of Love could have been a profitable venture, even if it meant taking risks.</p>
+</section>
+<section id="alibi" class="alibi__section">
+<h2 class="alibi__h2">The Polyglot Bible: Plantin’s Shield</h2>
+<p class="alibi__p1">Despite the suspicions, Plantin managed to avoid severe punishment. His greatest defense was the Polyglot Bible, a
+massive project funded by King Philip II of Spain.</p>
+<p class="alibi__latin">Latin</p>
+<p class="alibi__hebrew">Hebrew</p>
+<p class="alibi__greek">Greek</p>
+<p class="alibi__aramaic">Aramaic</p>
+<img class="biblia__sacria" src="./assets/img/bibliasacria.png" alt="picture of opening page bible">
+<p alibi__p2>This masterpiece, completed in 1573, showcased Plantin’s loyalty to the Catholic Church. It included texts in Hebrew,
+Greek, Latin, and Aramaic and was seen as a triumph of Catholic scholarship.</p>
+<p class="alibi__p3">The Polyglot Bible’s success protected Plantin’s reputation. It allowed him to keep his position as Royal Printer, even
+as questions about his other activities lingered.</p>
+<a href="https://museumplantinmoretus.be/en/page/royal-bible-five-languages-arias-montanus">➞ More about the polyglot bible</a>
+</section>
+<section id="verdict" class="verdict__section">
+<h2 class="verdict__h2">A Complicated Legacy</h2>
+<p class="verdict__p1">Was Christophe Plantin a secret supporter of the Family of Love, or was he simply a clever businessman willing to take
+risks? The truth remains unclear. His connections, printing choices, and ability to avoid punishment suggest a man
+deeply involved in the religious and intellectual debates of his time.
+</p>
+<p class="verdict__p2">What is certain is that Plantin was no ordinary printer. He was a survivor, balancing faith, business, and secrecy in a
+time when a single misstep could cost everything.</p>
+<p class="verdict__p3">What do you think? Was he innocent, or was he guilty?</p>
+<button class="innocent__btn">innocent</button>
+<button class="guilty__btn">guilty</button>
+</section>
   <script type="module" src="src/js/burger.js"></script>
+  <script type="module" src="src/js/script.js"></script>
 </body>
 
 
