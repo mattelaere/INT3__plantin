@@ -320,7 +320,7 @@ body {
   .hero__section {
     background-image: url("../../assets/img/paperbackgroundloweropacity.png");
     background-repeat: repeat;
-    min-height: 100vh;
+    min-height: 60vh;
     min-width: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -741,6 +741,10 @@ body {
   max-width: 20rem;
 }
 
+@media only screen and (min-width: 37.5em) {
+  
+}
+
 /* ------- evidence section ------- */
 
 .evidence__section {
@@ -961,7 +965,7 @@ body {
   margin-bottom: 2rem;
 }
 
-#coin-container {
+.the__coin {
   grid-column: 1/3;
 }
 

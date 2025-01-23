@@ -4,6 +4,13 @@ import { DotLottie } from '@lottiefiles/dotlottie-web';
 
 
 
+new DotLottie({
+    autoplay: false,
+    loop: false,
+    canvas: document.querySelector('.the__coin canvas'),
+    src: `${import.meta.env.BASE_URL}animations/known__coin.json`,
+
+});
 
 new DotLottie({
     autoplay: true,
@@ -14,13 +21,6 @@ new DotLottie({
 
 
 
-new DotLottie({
-    autoplay: false,
-    loop: false,
-    canvas: document.querySelector('.coin canvas'),
-    src: `${import.meta.env.BASE_URL}animations/thecoin.json`,
-    
-});
 
 
 
