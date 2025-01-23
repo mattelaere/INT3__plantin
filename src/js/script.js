@@ -10,13 +10,14 @@ new DotLottie({
     src: "/animations/plantinorteliuscoin.json",
 });
 
-
-
-const balanceAnimation = lottie.loadAnimation({
-    container: document.getElementById('balance'), 
-    renderer: 'svg',
-    path: "../../public/animations/balance.json",
+new DotLottie({
+    autoplay: true,
+    loop: true,
+    canvas: document.getElementById('balance'),
+    src: "/animations/balance.json",
 });
+
+
 
 
 
