@@ -1,15 +1,15 @@
 const animation = lottie.loadAnimation({
-    container: document.getElementById('coin-container'), // The container div
-    renderer: 'svg', // Renders as scalable vector graphics
-    loop: false,     // Disable looping for swipe interaction
-    autoplay: false, // We control playback manually
-    path: "../../assets/animations/plantinorteliuscoin.json", // Update with the path to your JSON
+    container: document.getElementById('coin-container'), 
+    renderer: 'svg', 
+    loop: false,     
+    autoplay: false, 
+    path: "../../public/animations/plantinorteliuscoin.json", 
 });
 
 const balanceAnimation = lottie.loadAnimation({
-    container: document.getElementById('balance'), // The container div
-    renderer: 'svg', // Renders as scalable vector graphics
-    path: "../../assets/animations/balance.json", // Update with the path to your JSON
+    container: document.getElementById('balance'), 
+    renderer: 'svg',
+    path: "../../assets/animations/balance.json",
 });
 
 document.getElementById('coin-container').addEventListener('touchstart', (e) => {
