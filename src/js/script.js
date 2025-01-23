@@ -9,23 +9,8 @@ const animation = lottie.loadAnimation({
 const balanceAnimation = lottie.loadAnimation({
     container: document.getElementById('balance'), 
     renderer: 'svg',
-    path: "../../assets/animations/balance.json",
+    path: "../../public/animations/balance.json",
 });
 
-document.getElementById('coin-container').addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-});
 
-document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
 
-    const deltaX = e.touches[0].clientX - startX;
-    const progress = Math.min(Math.max(deltaX / window.innerWidth, 0), 1);
-
-    animation.goToAndStop(progress * animation.totalFrames, true);
-});
-
-document.addEventListener('touchend', () => {
-    isDragging = false;
-});
