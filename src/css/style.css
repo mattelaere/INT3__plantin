@@ -452,8 +452,24 @@ font-size: 1.155rem;
   }
 
   .nav__link {
-    padding-inline: 2rem;
+    padding-inline:1rem;
   }
+
+  .intro__p1,.intro__p2,.intro__p3,.intro__p4{
+  
+      font-size: 1.4250rem;
+      line-height: 1.575rem;
+      max-width: 26.3125rem;
+      z-index: 3;
+  }
+
+    .intro__p1 {
+      margin-top: -15rem;
+      
+    }
+    .intro__p2 {
+      margin-top: -10rem;
+    }
 
 }
 
@@ -504,6 +520,10 @@ font-size: 1.155rem;
 }
 .nav__item,.nav__item:last-of-type {
   font-size: 1.555rem;
+}
+
+.nav__link {
+  padding-inline: 1.5rem;
 }
 
 }
