@@ -169,7 +169,6 @@ body {
 .intro__section {
   background-image: url("../../assets/img/paperbackgroundloweropacity.png");
   background-repeat: repeat;
-
   display: grid;
   grid-template-rows: 5(1fr);
   grid-template-columns: 1fr 1fr;
@@ -344,8 +343,7 @@ body {
   .above__title,
   .heresey,
   .hero__text,
-  .section__transition,
-  .antwerpen__bg {
+  .section__transition {
     display: none;
   }
 
@@ -365,12 +363,9 @@ body {
     grid-row: 2/3;
     justify-self: flex-end;
     align-self: flex-start;
-
     display: flex;
     flex-direction: column;
-
     width: fit-content;
-
     color: var(--brown);
     text-align: right;
     font-family: "EB Garamond";
@@ -383,7 +378,7 @@ body {
     -webkit-line-clamp: 2;
     line-clamp: 2;
     margin-right: 2rem;
-    margin-top: -2rem;
+   margin-top: 1rem;
     z-index: 2;
   }
 
@@ -392,6 +387,7 @@ body {
     font-size: 2.5vw;
     text-decoration: underline;
     color: var(--burgundy);
+    margin-bottom: 0.5rem;
   }
 
 
@@ -413,7 +409,7 @@ body {
     grid-column: 3/4;
     grid-row: 1/3;
     align-self: center;
-    margin-top: -15rem;
+    margin-top: -10rem;
     margin-right: 4vw;
     justify-self: flex-end;
     min-width: 17vw;
@@ -424,6 +420,7 @@ body {
   .nav {
     grid-template-columns: min-content auto;
     align-items: center;
+    margin-top: -0.5rem;
   }
 
   .nav__title {
@@ -448,43 +445,44 @@ body {
   .nav__item,
   .nav__item:last-of-type {
     border: none;
-font-size: 1.155rem;
+    font-size: 1.155rem;
   }
 
   .nav__link {
-    padding-inline:1rem;
+    padding-inline: 1rem;
   }
 
-  .intro__p1,.intro__p2,.intro__p3,.intro__p4{
-  
-      font-size: 1.4250rem;
-      line-height: 1.575rem;
-      max-width: 26.3125rem;
-      z-index: 3;
+  .intro__p1,
+  .intro__p2,
+  .intro__p3,
+  .intro__p4 {
+
+    font-size: 1.4250rem;
+    line-height: 1.875rem;
+    max-width: 30.3125rem;
+    z-index: 3;
   }
 
-    .intro__p1 {
-      margin-top: -15rem;
-      
-    }
-    .intro__p2 {
-      margin-top: -10rem;
-    }
+  .intro__p1{
+    margin-top: 2rem;
+  }
+
 
 }
 
 @media only screen and (min-width: 48em) {
-.hero__title__desk{
-  margin-top: 2rem;
-}
+  .hero__title__desk {
+    margin-top: 2rem;
+  }
 
-.plantin__logo{
-  margin-top: -5rem;
-}
+  .plantin__logo {
+    margin-top: -5rem;
+  }
 
-.nav__item,.nav__item:last-of-type{
-  font-size: 1.355rem;
-}
+  .nav__item,
+  .nav__item:last-of-type {
+    font-size: 1.355rem;
+  }
 }
 
 @media only screen and (min-width: 56.25em) {
@@ -498,7 +496,7 @@ font-size: 1.155rem;
   .plantin__hero__desk {
     display: block;
     max-width: 80vw;
-  
+
     grid-row: 1/3;
     grid-column: 1/3;
   }
@@ -515,16 +513,18 @@ font-size: 1.155rem;
     margin-top: 4rem;
   }
 
-.hero__title__desk{
+  .hero__title__desk {
     margin-top: 7rem;
-}
-.nav__item,.nav__item:last-of-type {
-  font-size: 1.555rem;
-}
+  }
 
-.nav__link {
-  padding-inline: 1.5rem;
-}
+  .nav__item,
+  .nav__item:last-of-type {
+    font-size: 1.555rem;
+  }
+
+  .nav__link {
+    padding-inline: 1.5rem;
+  }
 
 }
 
@@ -617,9 +617,21 @@ font-size: 1.155rem;
   max-width: 22rem;
   height: 4.125rem;
   align-self: center;
+  line-height: 100%;
+  padding-bottom: 1rem;
 }
 
+@media only screen and (min-width: 37.5em) {
 
+.slide__over__p{
+  min-width: 27rem;
+  line-height: 120%;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 1.325rem;
+}
+
+}
 
 /* ------ accusation section ------ */
 
@@ -1251,6 +1263,16 @@ font-size: 1.155rem;
   gap: 2rem;
 }
 
-
-
-
+.verdict__link {
+  color: var(--burgundy);
+  font-size: 1.2250rem;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  max-width: 24.8125rem;
+  line-height: 130%;
+}
