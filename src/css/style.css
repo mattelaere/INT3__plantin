@@ -235,6 +235,15 @@ body {
   margin-left: -2rem;
 }
 
+.year__p,
+.intro__p1__desk {
+  display: none;
+}
+
+.antwerp {
+  display: none;
+}
+
 /* -------- burger menu --------- */
 
 .nav a:any-link {
@@ -314,6 +323,8 @@ body {
 .nav__link:hover {
   background-color: var(--primary-color);
 }
+
+
 
 @media only screen and (min-width: 37.5em) {
 
@@ -483,6 +494,77 @@ body {
   .nav__item:last-of-type {
     font-size: 1.355rem;
   }
+
+
+
+  .intro__section {
+    grid-column: 2(1fr);
+    grid-row: 5(1fr);
+    padding: 0 4rem;
+  }
+
+  .year__p {
+    display: block;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-top: 2rem;
+    max-width: 30.3125rem;
+    color: var(--inbetween);
+    font-family: "EB Garamond";
+    font-size: 3.20806rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 2.92338rem;
+
+  }
+
+  .intro__p1__desk {
+    display: block;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 1.4250rem;
+    line-height: 1.875rem;
+    max-width: 42.5rem;
+
+  }
+
+  .intro__p1 {
+    display: none;
+  }
+
+  .intro__p2 {
+    display: none;
+  }
+
+  .antwerpen__bg {
+    display: none;
+  }
+
+
+  .intro__p3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin-top: 0;
+    width: 30.5rem;
+  }
+
+  .intro__p4 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    margin-top: 0;
+    max-width: 30.5rem;
+  }
+
+  .antwerp {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 1/5;
+    width: 34.8125rem;
+    height: 30.5rem;
+    align-self: center;
+    margin-left: -14rem;
+  }
+
 }
 
 @media only screen and (min-width: 56.25em) {
@@ -741,6 +823,13 @@ body {
 
 }
 
+
+.fol__heart,
+.fol__text {
+  display: none;
+}
+
+
 @media only screen and (min-width: 37.5em) {
 
 
@@ -787,6 +876,119 @@ body {
   }
 
 
+
+}
+
+@media only screen and (min-width: 48em) {
+
+  .accusation__section {
+    display: grid;
+    grid-template-rows: 3(1fr);
+    grid-template-columns: 2(1fr);
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  .family__of__love__heart,
+  .family__of__love__detail {
+    display: none;
+  }
+
+  .fol__heart {
+    display: block;
+    width: 26.0455rem;
+    height: 35.18081rem;
+    transform: rotate(-14.156deg);
+    margin-left: -10rem;
+    margin-top: 5rem;
+    grid-row: 1/4;
+    grid-column: 1/2;
+
+  }
+
+
+  .fol__text {
+    display: block;
+    width: 37.99175rem;
+    height: 40.26281rem;
+    grid-row: 1/4;
+    grid-column: 1/2;
+    margin-left: -15rem;
+    margin-top: 3rem;
+
+  }
+
+  .accusation__h2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 3.98038rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    text-align: right;
+    width: 22.3125rem;
+    justify-self: center;
+    margin-bottom: 4rem;
+margin-left: -4rem;
+
+  }
+
+  .accusation__subtitle {
+    color: var(--brownish);
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 0;
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding: 0;
+margin-top: -2rem;
+
+  }
+
+  .accusation__p {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 1.2125rem;
+    margin-right: 2rem;
+  width: 21.5rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    margin-top: -6rem;
+  }
+
+
+.plantin__case{
+  grid-row: 3/4;
+  padding: 0.5rem 5rem 0.5rem 0.5rem;
+  grid-column: 2/3;
+  align-self: flex-end;
+  width: 21.5rem;
+}
+
+
+.plantin__case__h3{
+  align-self: stretch;
+  font-size: 1.2625rem;
+  width: 21.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.plantin__case__p{
+  font-size: 1.1125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    align-self: flex-start;
+}
 
 }
 
