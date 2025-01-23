@@ -4,7 +4,6 @@
   --burgundy: #572D2D;
   --refreshing-blue: #5D87B0;
   --inbetween: #585149;
-  --inbetween: #585149;
   --brown: #302B2B;
   --max-page-width: 95rem;
   --brownish: #CBAC8D;
@@ -237,6 +236,85 @@ body {
   margin-left: -2rem;
 }
 
+/* -------- burger menu --------- */
+
+.nav a:any-link {
+  color: var(--refreshing-blue);
+  text-decoration: none;
+}
+
+.nav {
+  grid-row: 1/2;
+  grid-column: 2/4;
+  max-width: var(--max-page-width);
+  display: grid;
+  justify-self: flex-end;
+  align-self: flex-start;
+  margin-top: 4vh;
+  padding: 2rem;
+  z-index: 3;
+  color: var(--refreshing-blue);
+}
+
+.nav--fixed {
+  position: absolute;
+  width: calc(100% - 2rem);
+  top: 0;
+
+  background-color: white;
+}
+
+.nav__button {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center;
+  justify-self: end;
+
+
+  border: none;
+  margin-right: 3vw;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  appearance: none;
+  color: var(--burgundy);
+
+}
+
+.nav__button svg {
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  color: var(--burgundy);
+}
+
+.nav__list {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  margin-right: 2rem;
+  align-self: center;
+}
+
+.nav__item {
+  border-top: solid 1px black;
+  padding: .7rem 0;
+
+}
+
+.nav__item:last-of-type {
+  border-bottom: solid 1px black;
+}
+
+.nav__link {
+  display: block;
+  text-align: center;
+  padding: .5em;
+}
+
+.nav__link:hover {
+  background-color: var(--primary-color);
+}
 
 @media only screen and (min-width: 37.5em) {
 
@@ -370,12 +448,28 @@ body {
   .nav__item,
   .nav__item:last-of-type {
     border: none;
-
+font-size: 1.155rem;
   }
 
   .nav__link {
-    padding-inline: 2rem;
+    padding-inline:1rem;
   }
+
+  .intro__p1,.intro__p2,.intro__p3,.intro__p4{
+  
+      font-size: 1.4250rem;
+      line-height: 1.575rem;
+      max-width: 26.3125rem;
+      z-index: 3;
+  }
+
+    .intro__p1 {
+      margin-top: -15rem;
+      
+    }
+    .intro__p2 {
+      margin-top: -10rem;
+    }
 
 }
 
@@ -386,6 +480,10 @@ body {
 
 .plantin__logo{
   margin-top: -5rem;
+}
+
+.nav__item,.nav__item:last-of-type{
+  font-size: 1.355rem;
 }
 }
 
@@ -420,89 +518,14 @@ body {
 .hero__title__desk{
     margin-top: 7rem;
 }
-
-}
-
-
-
-/* -------- burger menu --------- */
-
-.nav a:any-link {
-  color: var(--refreshing-blue);
-  text-decoration: none;
-}
-
-.nav {
-  grid-row: 1/2;
-  grid-column: 2/4;
-  max-width: var(--max-page-width);
-  display: grid;
-  justify-self: flex-end;
-  align-self: flex-start;
-  margin-top: 4vh;
-  padding: 2rem;
-  z-index: 3;
-  color: var(--refreshing-blue);
-}
-
-.nav--fixed {
-  position: absolute;
-  width: calc(100% - 2rem);
-  top: 0;
-
-  background-color: white;
-}
-
-.nav__button {
-  grid-row: 1;
-  grid-column: 2;
-  align-self: center;
-  justify-self: end;
-
-
-  border: none;
-  margin-right: 3vw;
-  padding: 0;
-  font-size: 1rem;
-  line-height: 1;
-  background: transparent;
-  appearance: none;
-  color: var(--burgundy);
-
-}
-
-.nav__button svg {
-  width: 3rem;
-  height: 3rem;
-  padding: 1rem;
-  color: var(--burgundy);
-}
-
-.nav__list {
-  grid-row: 2;
-  grid-column: 1 / span 2;
-  margin-right: 2rem;
-  align-self: center;
-}
-
-.nav__item {
-  border-top: solid 1px black;
-  padding: .7rem 0;
-
-}
-
-.nav__item:last-of-type {
-  border-bottom: solid 1px black;
+.nav__item,.nav__item:last-of-type {
+  font-size: 1.555rem;
 }
 
 .nav__link {
-  display: block;
-  text-align: center;
-  padding: .5em;
+  padding-inline: 1.5rem;
 }
 
-.nav__link:hover {
-  background-color: var(--primary-color);
 }
 
 
