@@ -3,20 +3,24 @@ import { DotLottie } from '@lottiefiles/dotlottie-web';
 
 
 
-new DotLottie({
-    autoplay: false,
-    loop: false,
-    canvas: document.getElementById('coin-container'),
-    src: "/animations/plantinorteliuscoin.json",
-});
+
 
 new DotLottie({
     autoplay: true,
     loop: true,
-    canvas: document.getElementById('balance'),
-    src: "/animations/balance.json",
+    canvas: document.querySelector('.balance canvas'),
+    src: `${import.meta.env.BASE_URL}animations/balance.json`,
 });
 
+
+
+new DotLottie({
+    autoplay: false,
+    loop: false,
+    canvas: document.querySelector('.coin canvas'),
+    src: `${import.meta.env.BASE_URL}animations/thecoin.json`,
+    
+});
 
 
 
