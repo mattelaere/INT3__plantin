@@ -1,6 +1,4 @@
 
-
-
 const init = () => {
    
     const $nav = document.querySelector('.nav');

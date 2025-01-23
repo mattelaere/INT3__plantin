@@ -821,7 +821,7 @@ body {
   gap: 1rem;
   padding: 2rem 0;
   background-image: url("../../assets/img/woodbackgroundsmallbrown.jpg");
-  display: none;
+  /* display: none; */
 }
 
 .anonymous__numbering {
@@ -869,9 +869,7 @@ body {
   justify-self: center;
 }
 
-.hidden {
-  opacity: 0;
-}
+
 
 @media only screen and (max-width: 26.438em) {
   .heresey {
@@ -1024,7 +1022,7 @@ body {
 @media only screen and (min-width: 37.5em) {
 
   .anonymous__interaction__section {
-    padding: 0 2rem;
+
     padding-top: 4rem;
   }
 
@@ -1034,6 +1032,32 @@ body {
 
   .anonymous__numbering {
     margin-left: 3rem;
+  }
+
+  .anonymous__more {
+    padding: 4rem 0;
+  }
+
+  .anonymous__more__p1,
+  .anonymous__more__p2,
+  .anonymous__more__p3 {
+    max-width: 31.3125rem;
+    font-size: 1.3rem;
+    line-height: 140%;
+  }
+
+  .anonymous__more__subtitle,
+  .anonymous__more__h3 {
+    justify-self: flex-start;
+    max-width: 15rem;
+  }
+
+
+  .anonymous__book {
+    width: 9.5625rem;
+    height: 13.0625rem;
+    justify-self: flex-end;
+    margin-right: 2rem;
   }
 }
 
@@ -1210,7 +1234,14 @@ body {
 }
 
 .robbery__p {
-  display: none;
+  color: var(--brown);
+  font-size: 1.2250rem;
+  font-weight: 500;
+  line-height: 130%;
+  max-width: 20.8125rem;
+  grid-column: 1/3;
+  padding: 0 2rem;
+  justify-self: center;
 }
 
 .robbery__box {
@@ -1228,50 +1259,60 @@ body {
     margin-bottom: 3rem;
   }
 
-  .robbery__numbering{
+  .robbery__numbering {
     margin-left: 0;
   }
 
 
-.robbery__goblet, .robbery__vase, .robbery__text {
- min-width: 12rem;
+  .robbery__goblet,
+  .robbery__vase,
+  .robbery__text {
+    min-width: 12rem;
+
+  }
+
+  .robbery__goblet {
+    margin-left: 18rem;
+  }
+
+  .robbery__vase {
+    margin-top: 7rem;
+    margin-right: 16rem;
+  }
+
+  .robbery__violin {
+    min-width: 18rem;
+    margin-top: 8rem;
+    margin-left: 12rem;
+  }
+
+
+  .robbery__harp {
+    min-width: 16rem;
+    margin-right: 6rem;
+    margin-top: 0rem;
+  }
+
+  .robbery__arrow {
+    min-width: 3rem;
+    animation: float 1.2s infinite;
+    margin-bottom: 2rem;
+
+  }
+
+  .robbery__box {
+    min-width: 16rem;
+  }
+
+  .robbery__p {
+    max-width: 30.3125rem;
+    font-size: 1.3rem;
+    padding-bottom: 3rem;
+  }
+
 
 }
 
-.robbery__goblet{
-margin-left: 18rem;
-}
-
-.robbery__vase{
-  margin-top: 7rem;
-margin-right: 16rem;
-}
-
-.robbery__violin{
-  min-width: 18rem;
-  margin-top: 8rem;
-margin-left: 12rem;
-}
-
-
-.robbery__harp{
-  min-width: 16rem;
-margin-right: 6rem;
-  margin-top: 0rem;
-}
-
-.robbery__arrow{
-  min-width: 3rem;
-  animation: float 1.2s infinite;
-  margin-bottom: 2rem;
- 
-}
-
-.robbery__box{
-  min-width: 16rem;
-}
-
-}
 /* --------- motive section  --------- */
 
 .motive__section {
@@ -1298,6 +1339,29 @@ margin-right: 6rem;
   font-weight: 500;
   line-height: 1.575rem;
   max-width: 22.3125rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+
+  .motive__h2 {
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .balance canvas {
+    min-width: 40rem;
+  }
+
+
+  .motive__p1,
+  .motive__p2 {
+    max-width: 30.3125rem;
+    font-size: 1.3rem;
+    line-height: 130%;
+  }
+
+
+
 }
 
 /* ----------- alibi section ------------ */
@@ -1386,6 +1450,53 @@ margin-right: 6rem;
 }
 
 
+@media only screen and (min-width: 37.5em) {
+
+  .alibi__h2 {
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .alibi__p1,
+  .alibi__p2,
+  .alibi__p3 {
+    max-width: 30.3125rem;
+    font-size: 1.3rem;
+    line-height: 130%;
+  }
+
+
+  .alibi__latin {
+    font-size: 6.08569rem;
+    margin-left: 21rem;
+  }
+
+  .alibi__greek {
+    font-size: 5.61906rem;
+    margin-right: -8rem;
+    margin-top: -2rem;
+  }
+
+  .alibi__hebrew {
+    font-size: 4.2rem;
+    margin-right: 23rem;
+  }
+
+  .alibi__aramaic {
+    font-size: 5.70944rem;
+  }
+
+  .biblia__sacria {
+    width: 13rem;
+    height: 18rem;
+  }
+
+  .alibi__link {
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+
 /* --------- verdict section --------- */
 
 .verdict__section {
@@ -1415,6 +1526,7 @@ margin-right: 6rem;
 
 .verdict__p3 {
   padding-top: 1rem;
+  font-weight: 600;
 }
 
 .innocent__btn {
@@ -1468,4 +1580,41 @@ margin-right: 6rem;
   text-underline-position: from-font;
   max-width: 24.8125rem;
   line-height: 130%;
+}
+
+@media only screen and (min-width: 37.5em) {
+
+  .verdict__h2 {
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+    margin-right: 5rem;
+  }
+
+  .verdict__p1,
+  .verdict__p2 {
+    max-width: 30.3125rem;
+    font-size: 1.3rem;
+    line-height: 130%;
+  }
+
+
+  .verdict__p3 {
+
+    max-width: 31.3125rem;
+  }
+
+  .innocent__btn,
+  .guilty__btn {
+    font-size: 2rem;
+
+    padding: 0 5rem;
+
+  }
+
+
+  .verdict__link {
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+
 }
