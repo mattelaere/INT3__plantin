@@ -1,6 +1,11 @@
 
 import { DotLottie } from '@lottiefiles/dotlottie-web';
-import {shake} from 'shake.js'
+const draggableItems = document.querySelectorAll('.robbery__images img[draggable="true"]');
+const dropBox = document.getElementById('drop-box');
+const robberyText = document.getElementById('robbery-text');
+const robberyArrow = document.querySelector('.robbery__arrow');
+const robberyTextImage = document.querySelector('.robbery__text');
+let droppedItemsCount = 0;
 
 new DotLottie({
     autoplay: false,
@@ -31,4 +36,44 @@ document.querySelector('.innocent__btn').addEventListener('click', () => {
 
 
 
+draggableItems.forEach(item => {
+    item.addEventListener('dragstart', dragStartHandler);
+});
 
+dropBox.addEventListener('dragover', dragOverHandler);
+dropBox.addEventListener('drop', dropHandler);
+
+function dragStartHandler(e) {
+    console.log('Drag start:', e.target.id);
+    e.dataTransfer.setData('text/plain', e.target.id);
+}
+
+function dragOverHandler(e) {
+    e.preventDefault();
+    dropBox.classList.add('drag-over');
+
+}
+
+function dropHandler(e) {
+    e.preventDefault();
+    dropBox.classList.remove('drag-over');
+    const id = e.dataTransfer.getData('text/plain');
+    console.log('Drop:', id);
+    const draggableElement = document.getElementById(id);
+    if (draggableElement && !draggableElement.classList.contains('dropped')) {
+        draggableElement.classList.add('dropped');
+        draggableElement.style.display = 'none';
+        droppedItemsCount++;
+        console.log('Dropped items count:', droppedItemsCount);
+        if (droppedItemsCount === draggableItems.length) {
+            robberyText.style.display = 'block';
+            robberyArrow.classList.add('hide');
+            robberyTextImage.classList.add('grow');
+            dropBox.classList.add('hide');
+            setTimeout(() => {
+                robberyArrow.classList.add('hidden');
+                dropBox.classList.add('hidden');
+            }, 300);
+        }
+    }
+}

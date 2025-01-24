@@ -169,14 +169,15 @@
       <h2 class="robbery__h2">The Robbery of 1562</h2>
       <div class="robbery__images">
         <img class="robbery__text" src="./assets/img/text.png" alt="banned text">
-        <img class="robbery__harp" src="./assets/img/harp.png" alt="harp">
-        <img class="robbery__goblet" src="./assets/img/goblet.png" alt="goblet">
-        <img class="robbery__vase" src="./assets/img/vase.png" alt="vase">
-        <img class="robbery__violin" src="./assets/img/violin.png" alt="violin">
+        <img class="robbery__harp" src="./assets/img/harp.png" alt="harp" draggable="true" id="harp">
+        <img class="robbery__goblet" src="./assets/img/goblet.png" alt="goblet" draggable="true" id="goblet">
+        <img class="robbery__vase" src="./assets/img/vase.png" alt="vase" draggable="true" id="vase">
+        <img class="robbery__violin" src="./assets/img/violin.png" alt="violin" draggable="true" id="violin">
       </div>
       <img class="robbery__arrow" src="./assets/img/arrow.svg" alt="arrow">
-      <img class="robbery__box" src="./assets/img/box.png" alt="box">
-      <p class="robbery__p">In 1562, thieves broke into Plantin’s home and stole <span class="blue__extrabold">banned
+      <img class="robbery__box" src="./assets/img/box.png" alt="box" id="drop-box">
+      <p class="robbery__p" id="robbery-text" style="display: none;">In 1562, thieves broke into Plantin’s home and stole <span
+          class="blue__extrabold">banned
           books</span>. Authorities investigated,
         and Plantin denied knowing
         the content of these works.
@@ -245,17 +246,17 @@
           business, and secrecy in a
           time when a single misstep could cost everything.</p>
         <p class="verdict__p3">What do you think? Was he innocent, or was he guilty?</p>
-        
+
         <div class="buttons">
-          <button class="innocent__btn">Innocent</button>
           <button class="guilty__btn">Guilty</button>
+          <button class="innocent__btn">Innocent</button>
         </div>
         <a class="verdict__link"
           href="https://museumplantinmoretus.be/nl?gad_source=1&gclid=Cj0KCQiA7se8BhCAARIsAKnF3rx2tVoOXU580Dl_WhyS2FnfCghbg5RHCCts6nmc1dtBFJ1haPAjQSkaAnzwEALw_wcB">➞
           Still in doubt? Find out more about Christophe Plantin at the museum.</a>
       </div>
       <div class="angel__bg"></div>
-      
+
     </div>
   </section>
   <script type="module" src="src/js/burger.js"></script>

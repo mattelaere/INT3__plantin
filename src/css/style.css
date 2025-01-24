@@ -1700,7 +1700,11 @@ p {
 .robbery__text {
   margin-top: 5rem;
   margin-left: 1rem;
+  transition: transform 0.5s ease-in-out;
+  
+
 }
+
 
 
 .robbery__vase {
@@ -1726,7 +1730,20 @@ p {
   grid-column: 1/3;
   grid-row: 3/4;
   justify-self: center;
+  transition: opacity 0.3s ease-in-out;
 }
+.robbery__arrow.hide {
+  opacity: 0;
+
+}
+
+ .robbery__text.grow{
+  
+  transform: scale(1.4);
+  margin-bottom: 3rem;
+ }
+
+
 
 .robbery__p {
   color: var(--brown);
@@ -1737,7 +1754,7 @@ p {
   grid-column: 1/3;
   padding: 0 2rem;
   justify-self: center;
-  display: none;
+ margin-bottom: 2rem;
 }
 
 .robbery__box {
@@ -1745,6 +1762,30 @@ p {
   grid-row: 4/5;
   justify-self: center;
   margin-bottom: 2rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.robbery__box.hide {
+  opacity: 0;
+}
+
+.robbery__box.hidden {
+  display: none;
+}
+
+.robbery__images img {
+  cursor: grab;
+}
+
+#drop-box {
+  border: 2px var(--brownish) dashed;
+  padding: 10px;
+  position: relative;
+}
+
+#drop-box.drag-over {
+  border-color: var(--brown);
 }
 
 
@@ -1790,7 +1831,7 @@ p {
   }
 
   .robbery__arrow {
-    min-width: 3rem;
+    min-width: 1.4rem;
     animation: float 1.2s infinite;
     margin-bottom: 2rem;
 
@@ -1806,6 +1847,10 @@ p {
     padding-bottom: 3rem;
   }
 
+    .robbery__text.grow {
+      transform: scale(1.4);
+      
+    }
 
 }
 
@@ -1824,21 +1869,29 @@ p {
   }
 
   .robbery__arrow {
-    rotate: 30deg;
+    rotate: 40deg;
     align-self: center;
-    margin-top: 3rem;
+    
     margin-right: 2rem;
 
   }
 
   .robbery__p {
+    background-image: url("../../assets/img/lowopacitybox.png");
+      background-repeat: no-repeat;
+      background-size: contain;
     margin-right: 6rem;
     width: 30.5rem;
     font-size: 1.45rem;
+    padding-bottom: 4rem;
     grid-row: 3/5;
-    background-image: url("../../assets/img/lowopacitybox.png");
-    background-repeat: no-repeat;
+   
   }
+
+.robbery__text.grow {
+  transform: translateX(-26vw);
+
+}
 
 }
 
@@ -2255,13 +2308,15 @@ p {
 
 .verdict__section.guilty .verdict__content h2,
 .verdict__section.guilty .verdict__content p,
-.verdict__section.guilty .verdict__content a,
 .verdict__section.innocent .verdict__content h2,
-.verdict__section.innocent .verdict__content p,
-.verdict__section.innocent .verdict__content a {
+.verdict__section.innocent .verdict__content p {
   display: none;
 }
 
+.verdict__section.guilty .verdict__content a,
+.verdict__section.innocent .verdict__content a {
+  color: var(--broken-white);
+}
 
 @media only screen and (max-width: 37.5rem) {
 
@@ -2270,9 +2325,11 @@ p {
   .verdict__section.innocent .angel__image {
     display: block;
     position: relative;
+
     height: 10rem;
-    height: 17rem;
-    background-size: cover;
+    height: 13rem;
+ background-size: contain;
+ background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
   }
