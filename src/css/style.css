@@ -895,7 +895,10 @@ p {
     grid-template-rows: 3(1fr);
     grid-template-columns: 2(1fr);
     gap: 2rem;
-    margin-right: 2rem;
+    background-image: url("../../assets/img/bg__detail.png");
+    background-repeat: no-repeat;
+    background-size: 36.94081rem;
+    background-position: 35rem -14rem;
   }
 
   .family__of__love__heart,
@@ -1003,6 +1006,24 @@ p {
 
 }
 
+
+@media only screen and (min-width: 56.25em) {
+
+
+
+  .accusation__section {
+
+    background-position: 75vw -14rem;
+  }
+
+  .fol__heart {
+    width: 30.40625rem;
+    height: 34.5625rem;
+    margin-left: -30vw;
+  }
+
+}
+
 /* ------- evidence section ------- */
 
 .evidence__section {
@@ -1023,6 +1044,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* grid-template-rows: 1fr 1fr; */
+
 }
 
 .anonymous__more {
@@ -1034,7 +1056,7 @@ p {
   gap: 1rem;
   padding: 2rem 0;
   background-image: url("../../assets/img/woodbackgroundsmallbrown.jpg");
-  display: none;
+  /* display: none; */
 }
 
 .anonymous__numbering {
@@ -1263,6 +1285,8 @@ p {
   grid-row: 4/5;
 }
 
+
+
 @media only screen and (min-width: 37.5em) {
 
   .anonymous__interaction__section {
@@ -1295,18 +1319,7 @@ p {
   .anonymous__more__h3 {
     justify-self: flex-start;
     max-width: 15rem;
-  }
 
-
-  .anonymous__book {
-    width: 9.5625rem;
-    height: 13.0625rem;
-    justify-self: flex-end;
-    margin-right: 2rem;
-  }
-
-  .phone__shaker {
-    display: none;
   }
 
   .tablet__shaker {
@@ -1318,7 +1331,25 @@ p {
     justify-self: center;
     animation: shake2 ease-in-out 1.5s infinite;
   }
+
+  .phone__shaker {
+    display: none;
+  }
+
+
 }
+
+.anonymous__book {
+  width: 9.5625rem;
+  height: 13.0625rem;
+  justify-self: flex-end;
+  margin-right: 2rem;
+}
+
+
+
+
+
 
 @media only screen and (min-width: 48em) {
 
@@ -1350,6 +1381,7 @@ p {
     grid-column: 2/3;
     width: 12.1575rem;
     height: 15.73863rem;
+
   }
 
   /* .normal__book__1,
@@ -1378,6 +1410,7 @@ p {
     font-size: 1.5625rem;
     font-weight: 800;
     line-height: 134%;
+    margin-top: 13rem;
   }
 
   .anonymous__more__subtitle {
@@ -1386,7 +1419,7 @@ p {
     align-self: flex-end;
     color: var(--burgundy);
     font-family: "EB Garamond";
-    font-size: 1.125rem;
+    font-size: 1.425rem;
     font-style: italic;
     font-weight: 400;
     line-height: 160%;
@@ -1398,10 +1431,24 @@ p {
   .anonymous__more__p3 {
     color: var(--brown);
     margin-left: 4rem;
-    font-size: 1.3125rem;
-    min-width: 26.5rem;
+    font-size: 1.3225rem;
+    min-width: 22.5rem;
     font-weight: 500;
     line-height: 130%;
+  }
+
+  .anonymous__more__p2 {
+    margin-top: -9rem;
+  }
+
+  .anonymous__more__p3 {
+
+    margin-top: -10rem;
+  }
+
+  .mysterious__book {
+    min-width: 14rem;
+    height: 15rem;
   }
 
   .anonymous__book {
@@ -1426,6 +1473,61 @@ p {
     font-size: 1.5125rem;
     font-weight: 500;
     line-height: 160%;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 56.25em) {
+
+
+
+  .anonymous__more__p1,
+  .anonymous__more__p2,
+  .anonymous__more__p3 {
+
+
+    font-size: 1.6125rem;
+    min-width: 27.5rem;
+
+  }
+
+
+
+
+  .anonymous__more__h3 {
+    font-size: 2rem;
+    min-width: 25.5rem;
+    margin-left: 3rem;
+  }
+
+
+  .anonymous__more__p2 {
+    margin-top: -4rem;
+  }
+
+  .anonymous__more__p3 {
+
+    margin-top: -2rem;
+  }
+
+  .normal__book__1,
+  .normal__book__2,
+  .normal__book__3,
+  .normal__book__4,
+  .normal__book__5,
+  .normal__book__6,
+  .normal__book__7 {
+
+    width: 18.1575rem;
+    height: 19.73863rem;
+
+  }
+
+  .mysterious__book {
+   min-width: 14rem;
+    height: 15rem;
   }
 
 
@@ -1711,34 +1813,35 @@ p {
 
 @media only screen and (min-width: 48em) {
 
-  .robbery__images{
+  .robbery__images {
     grid-column: 2/3;
     margin-right: 2rem;
   }
 
 
-  .robbery__box{
+  .robbery__box {
     grid-column: 1/2;
   }
 
-.robbery__arrow {
-  rotate: 30deg;
-  align-self: center;
-  margin-top: 3rem;
-  margin-right: 2rem;
+  .robbery__arrow {
+    rotate: 30deg;
+    align-self: center;
+    margin-top: 3rem;
+    margin-right: 2rem;
 
-}
+  }
 
-.robbery__p{
-  margin-right: 6rem;
+  .robbery__p {
+    margin-right: 6rem;
     width: 30.5rem;
     font-size: 1.45rem;
     grid-row: 3/5;
     background-image: url("../../assets/img/lowopacitybox.png");
     background-repeat: no-repeat;
-}
+  }
 
 }
+
 /* --------- motive section  --------- */
 
 .motive__section {
@@ -1786,6 +1889,19 @@ p {
     line-height: 130%;
   }
 
+
+
+}
+
+
+@media only screen and (min-width: 48em) {
+
+  .motive__p1,
+  .motive__p2 {
+
+    width: 30.5rem;
+    font-size: 1.45rem;
+  }
 
 
 }
@@ -1875,6 +1991,10 @@ p {
   text-underline-position: from-font;
 }
 
+.alibi__english {
+  display: none;
+}
+
 
 @media only screen and (min-width: 37.5em) {
 
@@ -1899,7 +2019,7 @@ p {
 
   .alibi__greek {
     font-size: 5.61906rem;
-    margin-right: -8rem;
+    margin-left: 22rem;
     margin-top: -2rem;
   }
 
@@ -1922,6 +2042,110 @@ p {
     padding: 2rem;
   }
 }
+
+
+@media only screen and (min-width: 48em) {
+
+
+  .alibi__section {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 5(1fr);
+    grid-template-columns: 3(1fr);
+    background-image: url("../../assets/img/bg__detail.png");
+    background-repeat: no-repeat;
+    background-size: 36.94081rem;
+    background-position: 35rem -14rem;
+  }
+
+  .alibi__languages {
+    grid-column: 1/2;
+    grid-row: 2/5;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: -3.5rem;
+  }
+
+  .alibi__h2 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    width: 31.3125rem;
+    font-size: 3.6375rem;
+    padding: 2rem 2rem;
+  }
+
+  .biblia__sacria {
+    grid-row: 1/6;
+    grid-column: 3/4;
+    position: relative;
+    width: 29.25rem;
+    height: 45rem;
+    margin-top: 0rem;
+    margin-right: -30vh;
+
+  }
+
+  .alibi__p1 {
+
+    width: 22.9375rem;
+
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-left: 2rem;
+  }
+
+  .alibi__p2 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin-left: 2rem;
+  }
+
+  .alibi__p3 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    margin-left: 2rem;
+  }
+
+
+  .alibi__link {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    padding: 0rem;
+    margin-top: 2rem;
+
+    justify-self: center;
+  }
+
+
+
+  .alibi__aramaic,
+  .alibi__greek,
+  .alibi__hebrew,
+  .alibi__latin,
+  .alibi__english {
+    font-size: 4.20131rem;
+    font-weight: 500;
+    line-height: normal;
+    align-self: flex-start;
+    max-width: 10rem;
+    margin: 0rem;
+    opacity: 0.4;
+    display: block;
+    justify-self: center;
+
+  }
+
+  .alibi__english {
+    color: var(--refreshing-blue);
+    display: block;
+  }
+
+
+
+}
+
+
 
 /* --------- verdict section --------- */
 
