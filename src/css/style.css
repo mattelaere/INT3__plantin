@@ -28,10 +28,6 @@ p {
   font-family: "EB Garamond";
 }
 
-.hidden {
-  display: none;
-}
-
 .hero__section {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr 1fr;
@@ -1059,7 +1055,7 @@ p {
   gap: 1rem;
   padding: 2rem 0;
   background-image: url("../../assets/img/woodbackgroundsmallbrown.jpg");
-  /* display: none; */
+ 
 }
 
 .anonymous__numbering {
@@ -2454,4 +2450,8 @@ p {
     background-repeat: no-repeat;
   }
 
+}
+
+.hidden {
+  display: none;
 }

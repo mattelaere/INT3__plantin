@@ -44,6 +44,7 @@ const robberyText = document.getElementById('robbery-text');
 const robberyArrow = document.querySelector('.robbery__arrow');
 const robberyTextImage = document.querySelector('.robbery__text');
 let droppedItemsCount = 0;
+const $books = document.querySelectorAll('.normal__book');
 
 
 document.querySelector('.guilty__btn').addEventListener('click', () => {
@@ -97,40 +98,40 @@ dropBox.addEventListener('drop', (e) => {
     }
 });
 
+
 const requestT = () => {
     document.querySelector(".shake__button").classList.add('hidden');
-
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         DeviceMotionEvent.requestPermission()
             .then(response => {
                 if (response == 'granted') {
-                    window.addEventListener('devicemotion', handleDeviceMotion, false);
+                    window.addEventListener('devicemotion', (e) => {
+                        if ((e.rotationRate.alpha > 256 || e.rotationRate.beta > 256 || e.rotationRate.gamma > 256)) {
+                            $books.forEach(book => {
+                                book.classList.add('hidden')
+                            });
+                        }
+                    }, false)
                 }
             })
-            .catch(console.error);
+            .catch(console.error)
     } else {
-        window.addEventListener('devicemotion', handleDeviceMotion);
+        window.addEventListener('devicemotion', (e) => {
+            if ((e.rotationRate.alpha > 256 || e.rotationRate.beta > 256 || e.rotationRate.gamma > 256)) {
+                $books.forEach(book => {
+                    book.classList.add('hidden')
+                });
+            }
+        })
     }
-};
+}
 
 
-const handleDeviceMotion = (e) => {
-    if (window.innerWidth < 48 * 16) { // 48em in pixels
-        const anonymousSection = document.querySelector('.anonymous__interaction__section');
-        const rect = anonymousSection.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
-        if (isVisible && (e.rotationRate.alpha > 256 || e.rotationRate.beta > 256 || e.rotationRate.gamma > 256)) {
-            document.querySelectorAll('.normal__book').forEach(img => {
-                img.classList.add('hide');
-            });
-            document.querySelector('.anonymous__more').style.display = 'block';
-        }
-    }
-};
 
 
 const init = () => {
+    document.querySelector(".anonymous__more").classList.add('hidden');
     document.querySelector(".shake__button").addEventListener("click", requestT);
 };
 
