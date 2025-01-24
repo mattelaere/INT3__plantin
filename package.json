@@ -12,7 +12,6 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-web": "^0.39.0",
-    "shake.js": "^1.2.2"
+    "@lottiefiles/dotlottie-web": "^0.39.0"
   }
 }
