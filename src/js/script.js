@@ -17,10 +17,17 @@ new DotLottie({
     src: `${import.meta.env.BASE_URL}animations/balance.json`,
 });
 
+document.querySelector('.guilty__btn').addEventListener('click', () => {
+    const verdictSection = document.querySelector('.verdict__section');
+    verdictSection.classList.remove('innocent');
+    verdictSection.classList.add('guilty');
+});
 
-
-
-
+document.querySelector('.innocent__btn').addEventListener('click', () => {
+    const verdictSection = document.querySelector('.verdict__section');
+    verdictSection.classList.remove('guilty');
+    verdictSection.classList.add('innocent');
+});
 
 
 

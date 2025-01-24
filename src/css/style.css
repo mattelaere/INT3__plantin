@@ -1526,7 +1526,7 @@ p {
   }
 
   .mysterious__book {
-   min-width: 14rem;
+    min-width: 14rem;
     height: 15rem;
   }
 
@@ -2232,6 +2232,61 @@ p {
   max-width: 24.8125rem;
   line-height: 130%;
 }
+
+.verdict__section.guilty {
+  background-color: var(--burgundy);
+  position: relative;
+}
+
+.verdict__section.innocent {
+  background-color: var(--refreshing-blue);
+  position: relative;
+}
+
+.verdict__section.guilty .devil__bg,
+.verdict__section.innocent .angel__bg {
+  display: none;
+}
+
+.verdict__section.guilty .devil__image,
+.verdict__section.innocent .angel__image {
+  display: none;
+}
+
+.verdict__section.guilty .verdict__content h2,
+.verdict__section.guilty .verdict__content p,
+.verdict__section.guilty .verdict__content a,
+.verdict__section.innocent .verdict__content h2,
+.verdict__section.innocent .verdict__content p,
+.verdict__section.innocent .verdict__content a {
+  display: none;
+}
+
+
+@media only screen and (max-width: 37.5rem) {
+
+
+  .verdict__section.guilty .devil__image,
+  .verdict__section.innocent .angel__image {
+    display: block;
+    position: relative;
+    height: 10rem;
+    height: 17rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  .verdict__section.guilty .devil__image {
+    background-image: url('../../assets/img/devilwhite.png');
+  }
+
+  .verdict__section.innocent .angel__image {
+    background-image: url('../../assets/img/angelwhite.png');
+  }
+
+}
+
 
 @media only screen and (min-width: 37.5em) {
 
