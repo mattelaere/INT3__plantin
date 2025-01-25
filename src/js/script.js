@@ -18,12 +18,14 @@ gsap.from(".slide__over", {
 });
 
 
-new DotLottie({
+const coinAnimation = new DotLottie({
     autoplay: false,
     loop: false,
     canvas: document.querySelector('.the__coin canvas'),
     src: `${import.meta.env.BASE_URL}animations/known__coin.json`,
 });
+
+
 
 
 new DotLottie({
@@ -45,6 +47,7 @@ const $robberyArrow = document.querySelector('.robbery__arrow');
 const $robberyTextImage = document.querySelector('.robbery__text');
 let droppedItemsCount = 0;
 const $books = document.querySelectorAll('.normal__book');
+const $coin = document.querySelector('.the__coin');
 
 
 document.querySelector('.guilty__btn').addEventListener('click', () => {
@@ -80,7 +83,7 @@ $dropBox.addEventListener('drop', (e) => {
     const id = e.dataTransfer.getData('text/plain');
     console.log('Drop:', id);
     const $draggableElement = document.getElementById(id);
-    if ($draggableElement && !draggableElement.classList.contains('dropped')) {
+    if ($draggableElement && !$draggableElement.classList.contains('dropped')) {
         $draggableElement.classList.add('dropped');
         $draggableElement.style.display = 'none';
         droppedItemsCount++;
@@ -101,7 +104,7 @@ $dropBox.addEventListener('drop', (e) => {
 
 
 const revealAnonymousSection = () => {
-    document.querySelectorAll('.normal__book').forEach(book => {
+    $books.forEach(book => {
         book.classList.add('hidden');
     });
     document.querySelector(".anonymous__more").classList.remove('hidden');
@@ -132,15 +135,38 @@ const shake = () => {
     }
 }
 
+const hoverBooks = () => {
+    let hoverCount = 0;
+    $books.forEach(book => {
+        book.addEventListener('mouseover', () => {
+            hoverCount++;
+            if (hoverCount >= $books.length) {
+                document.querySelector('.anonymous__instructions__desk').classList.add('hidden');
+                revealAnonymousSection();
+            }
+        });
+    });
+};
 
 
 
 
 const init = () => {
-    document.querySelector(".anonymous__more").classList.add('hidden');
-    document.querySelector(".shake__button").addEventListener("click", shake);
+    document.querySelector('.anonymous__more').classList.add('hidden');
+    document.querySelector('.tapper').classList.remove('hidden');
+    if (window.innerWidth < 48 * 16) {
+        document.querySelector(".shake__button").addEventListener("click", shake);
+    } else {
+        hoverBooks();
+    }
+   
+    const handleClick = () => {
+        coinAnimation.play();
+        document.querySelector('.tapper').classList.add('hidden');
+        $coin.removeEventListener('click', handleClick); // Remove the event listener to make it irreversible
+    };
+    $coin.addEventListener('click', handleClick);
 };
-
 
 init();
 
