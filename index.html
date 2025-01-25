@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/style.css">
@@ -44,11 +44,34 @@
       </ul>
     </nav>
     <img class="plantin__hero" src="assets/img/plantinhero.png" alt="image of plantin with compass">
-    <img class="plantin__hero__desk" src="assets/img/plantin__hero__desktop.png" alt="image of plantin with compass">
-     <img class="plantin__logo" src="./assets/img/plantinlogo.svg" alt="logo">
+    <!-- <img class="plantin__hero__desk" src="assets/img/plantin__hero__desktop.png" alt="image of plantin with compass"> -->
+    <picture class="plantin__hero__desk">
+      <source sizes="(max-width: 721px) 100vw, 721px" srcset="
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_425.avif 425w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_476.avif 476w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_522.avif 522w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_571.avif 571w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_616.avif 616w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_667.avif 667w,
+        ./assets/img/avif/plantin__hero__desktop_kgbl13_c_scale,w_721.avif 721w" type="image/avif">
+      <img sizes="(max-width: 721px) 100vw, 721px" srcset="
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_425.png 425w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_458.png 458w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_488.png 488w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_517.png 517w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_545.png 545w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_570.png 570w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_597.png 597w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_621.png 621w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_645.png 645w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_668.png 668w,
+    ./assets/img/plantin__hero__desktop_sguhwt_c_scale,w_721.png 721w"
+        src="./assets/img/lantin__hero__desktop_sguhwt_c_scale,w_721.png" alt="">
+    </picture>
+    <img class="plantin__logo" src="./assets/img/plantinlogo.svg" alt="logo">
     <img class="stamp" src="assets/img/stamp.png" alt="">
     <img class="stamps__desk" src="assets/img/stamps__desk.png" alt="">
-    <img class="title__lines" src="assets/img/titlelines.png" alt="">
+  
 
     <h1 class="hero__title__desk">
       <span><span class="title__background">a printer's</span></span>
@@ -178,7 +201,7 @@
       </div>
       <img class="robbery__arrow hidden" src="./assets/img/arrow.svg" alt="arrow">
       <img class="robbery__box hidden" src="./assets/img/box.png" alt="box" id="drop-box">
-      <p class="robbery__p" id="robbery-text" >In 1562, thieves broke into Plantin’s home and
+      <p class="robbery__p" id="robbery-text">In 1562, thieves broke into Plantin’s home and
         stole <span class="blue__extrabold">banned
           books</span>. Authorities investigated,
         and Plantin denied knowing
@@ -217,7 +240,38 @@
       <p class="alibi__greek">Greek</p>
       <p class="alibi__aramaic">Aramaic</p>
     </div>
-    <img class="biblia__sacria" src="./assets/img/bibliasacria.png" alt="picture of opening page bible">
+    <!-- <img class="biblia__sacria" src="./assets/img/bibliasacria.png" alt="picture of opening page bible"> -->
+    <picture class="biblia__sacria">
+      <source sizes="(min-width: 780px) 464px, (min-width: 620px) 208px, 112px" srcset="
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_200.avif 200w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_277.avif 277w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_340.avif 340w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_398.avif 398w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_450.avif 450w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_498.avif 498w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_543.avif 543w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_589.avif 589w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_634.avif 634w,
+    /assets/img/avif/bibliasacria_un11ca_c_scale,w_640.avif 640w" type="image/avif">
+      <img sizes="(min-width: 780px) 464px, (min-width: 620px) 208px, 112px" srcset="
+        /assets/img/bibliasacria_xpjofb_c_scale,w_200.png 200w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_241.png 241w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_278.png 278w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_310.png 310w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_341.png 341w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_365.png 365w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_388.png 388w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_412.png 412w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_435.png 435w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_456.png 456w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_476.png 476w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_496.png 496w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_515.png 515w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_532.png 532w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_550.png 550w,
+        /assets/img/bibliasacria_xpjofb_c_scale,w_640.png 640w" src="/assets/img/bibliasacria_xpjofb_c_scale,w_640.png"
+        alt="">
+    </picture>
     <p class="alibi__p2">This masterpiece, completed in 1573, showcased Plantin’s loyalty to the Catholic Church. It
       included
       texts in Hebrew,
