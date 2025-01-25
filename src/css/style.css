@@ -2362,13 +2362,21 @@ min-width: 18rem;
   position: relative;
 }
 
-.verdict__section.guilty .devil__bg,
+.verdict__section.guilty .devil__bg{
+  background-image: url('../../assets/img/devilwhite.png');
+}
+
 .verdict__section.innocent .angel__bg {
+  background-image: url('../../assets/img/angelwhite.png');
+}
+
+.verdict__section.guilty .angel__bg,
+.verdict__section.innocent .devil__bg {
   display: none;
 }
 
-.verdict__section.guilty .devil__image,
-.verdict__section.innocent .angel__image {
+.verdict__section.guilty .angel__image,
+.verdict__section.innocent .devil__image {
   display: none;
 }
 
@@ -2384,7 +2392,15 @@ min-width: 18rem;
   color: var(--broken-white);
 }
 
-@media only screen and (max-width: 37.5rem) {
+@media only screen and (max-width: 47.99em) {
+
+  .verdict__section.guilty .devil__image {
+      background-image: url('../../assets/img/devilwhite.png');
+    }
+  
+    .verdict__section.innocent .angel__image {
+      background-image: url('../../assets/img/angelwhite.png');
+    }
 
 
   .verdict__section.guilty .devil__image,
@@ -2400,7 +2416,14 @@ min-width: 18rem;
     z-index: 2;
   }
 
-  .verdict__section.guilty .devil__image {
+
+}
+
+
+
+@media only screen and (min-width: 48em) {
+
+.verdict__section.guilty .devil__image {
     background-image: url('../../assets/img/devilwhite.png');
   }
 
@@ -2408,16 +2431,39 @@ min-width: 18rem;
     background-image: url('../../assets/img/angelwhite.png');
   }
 
+  .verdict__section.guilty .devil__image,
+    .verdict__section.innocent .angel__image {
+      display: block;
+      position: relative;
+  
+      height: 20rem;
+      height: 25rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
 }
 
 
-@media only screen and (min-width: 37.5em) {
+
+@media only screen and (min-width: 56.25em) {
 
 
 
+.devil__bg{
+    width: 27.62694rem;
+      height: 29.6885rem;
+      background-image: url("../../assets/img/devilwhite.png");
+      background-repeat: no-repeat;
+}
 
-
-
+.angel__bg{
+  width: 27.62694rem;
+      height: 29.6885rem;
+      background-image: url("../../assets/img/angelwhite.png");
+      background-repeat: no-repeat;
+}
 
 
 

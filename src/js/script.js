@@ -95,17 +95,6 @@ const $coin = document.querySelector('.the__coin');
 const mediaQuery = window.matchMedia("(min-width: 48em)");
 
 
-document.querySelector('.guilty__btn').addEventListener('click', () => {
-    const $verdictSection = document.querySelector('.verdict__section');
-    $verdictSection.classList.remove('innocent');
-    $verdictSection.classList.add('guilty');
-});
-
-document.querySelector('.innocent__btn').addEventListener('click', () => {
-    const $verdictSection = document.querySelector('.verdict__section');
-    $verdictSection.classList.remove('guilty');
-    $verdictSection.classList.add('innocent');
-});
 
 
 
@@ -209,6 +198,8 @@ const init = () => {
     document.querySelector('.phone__shaker').classList.remove('hidden');
     document.querySelector('.tablet__shaker').classList.remove('hidden');
     document.querySelector('.alibi__english').classList.remove('hidden');
+    document.querySelector('.verdict__section').classList.remove('guilty');
+    document.querySelector('.verdict__section').classList.remove('innocent');
 
     if (window.innerWidth < 48 * 16) {
         document.querySelector(".shake__button").addEventListener("click", shake);
@@ -224,6 +215,17 @@ const init = () => {
     $coin.addEventListener('click', handleClick);
 
 
+
+    document.querySelector('.innocent__btn').addEventListener('click', () => {
+        document.querySelector('.verdict__section').classList.remove('guilty');
+        document.querySelector('.verdict__section').classList.add('innocent');
+    });
+
+
+        document.querySelector('.guilty__btn').addEventListener('click', () => {
+            document.querySelector('.verdict__section').classList.remove('innocent');
+            document.querySelector('.verdict__section').classList.add('guilty');
+        });
 
     if (mediaQuery.matches) {
         document.querySelector('.alibi__english').addEventListener('click', () => changeLanguage('english'));
