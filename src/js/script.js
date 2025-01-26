@@ -1,9 +1,15 @@
 
 import { DotLottie } from '@lottiefiles/dotlottie-web';
 gsap.registerPlugin(ScrollTrigger);
-
-
-
+const $draggableItems = document.querySelectorAll('.robbery__images img[draggable="true"]');
+const $dropBox = document.getElementById('drop-box');
+const $robberyText = document.getElementById('robbery-text');
+const $robberyArrow = document.querySelector('.robbery__arrow');
+const $robberyTextImage = document.querySelector('.robbery__text');
+let droppedItemsCount = 0;
+const $books = document.querySelectorAll('.normal__book');
+const $coin = document.querySelector('.the__coin');
+const mediaQuery = window.matchMedia("(min-width: 48em)");
 
 gsap.from(".slide__over", {
     y: 300,
@@ -25,9 +31,6 @@ const changeLanguage = (language) => {
             p2: "This masterpiece, completed in 1573, showcased Plantin’s loyalty to the Catholic Church. It included texts in Hebrew, Greek, Latin, and Aramaic and was seen as a triumph of Catholic scholarship.",
             p3: "The Polyglot Bible’s success protected Plantin’s reputation. It allowed him to keep his position as Royal Printer, even as questions about his other activities lingered."
         },
-
-
-
         latin: {
             p1: "Quamvis suspiciones, Plantinus gravi poena vitare curavit. Praecipua eius defensio fuit Biblia Polyglotta, magnum consilium a rege Philippo II Hispaniarum.",
             p2: "Hoc magisterium, anno 1573 confectum, ostendit Plantin fidelitatem erga Ecclesiam catholicam. Textus hebraici, graeci, latini et aramaici comprehendit et catholicae eruditionis triumphus visus est.",
@@ -69,9 +72,6 @@ const coinAnimation = new DotLottie({
     src: `${import.meta.env.BASE_URL}animations/known__coin.json`,
 });
 
-
-
-
 new DotLottie({
     autoplay: true,
     loop: true,
@@ -84,23 +84,9 @@ new DotLottie({
 
 
 
-const $draggableItems = document.querySelectorAll('.robbery__images img[draggable="true"]');
-const $dropBox = document.getElementById('drop-box');
-const $robberyText = document.getElementById('robbery-text');
-const $robberyArrow = document.querySelector('.robbery__arrow');
-const $robberyTextImage = document.querySelector('.robbery__text');
-let droppedItemsCount = 0;
-const $books = document.querySelectorAll('.normal__book');
-const $coin = document.querySelector('.the__coin');
-const mediaQuery = window.matchMedia("(min-width: 48em)");
-
-
-
-
 
 $draggableItems.forEach(item => {
     item.addEventListener('dragstart', (e) => {
-        console.log('Drag start:', e.target.id);
         e.dataTransfer.setData('text/plain', e.target.id);
     });
 });
@@ -108,20 +94,17 @@ $draggableItems.forEach(item => {
 $dropBox.addEventListener('dragover', (e) => {
     e.preventDefault();
     $dropBox.classList.add('drag-over');
-    console.log('Drag over');
 });
 
 $dropBox.addEventListener('drop', (e) => {
     e.preventDefault();
     $dropBox.classList.remove('drag-over');
     const id = e.dataTransfer.getData('text/plain');
-    console.log('Drop:', id);
     const $draggableElement = document.getElementById(id);
     if ($draggableElement && !$draggableElement.classList.contains('dropped')) {
         $draggableElement.classList.add('dropped');
         $draggableElement.style.display = 'none';
         droppedItemsCount++;
-        console.log('Dropped items count:', droppedItemsCount);
         if (droppedItemsCount === $draggableItems.length) {
             $robberyText.style.display = 'block';
             $robberyArrow.classList.add('hidden');
@@ -134,8 +117,6 @@ $dropBox.addEventListener('drop', (e) => {
         }
     }
 });
-
-
 
 const revealAnonymousSection = () => {
     $books.forEach(book => {
@@ -221,8 +202,6 @@ const init = () => {
         document.querySelector('.verdict__section').classList.remove('guilty');
         document.querySelector('.verdict__section').classList.add('innocent');
     });
-
-
         document.querySelector('.guilty__btn').addEventListener('click', () => {
             document.querySelector('.verdict__section').classList.remove('innocent');
             document.querySelector('.verdict__section').classList.add('guilty');
