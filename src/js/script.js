@@ -191,6 +191,7 @@ const init = () => {
     document.getElementById('violin').classList.remove('hidden');
     document.getElementById('harp').classList.remove('hidden');
     document.getElementById('drop-box').classList.remove('hidden');
+    document.querySelector('.anonymous__instructions__desk').classList.remove('hidden');
     document.querySelector('.robbery__arrow').classList.remove('hidden');
     document.querySelector('.anonymous__more').classList.add('hidden');
     document.querySelector('.robbery__p').classList.add('hidden');
